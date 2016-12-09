@@ -7,8 +7,8 @@
 -debug:full
 -nostdlib
 -nologo
-"c:\users\david\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
--out:"c:\users\david\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\bin\Debug\netcoreapp1.0\CityInfo.API.dll"
+"C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
+-out:"C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\bin\Debug\netcoreapp1.0\CityInfo.API.dll"
 -r:"C:\Users\David\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.1\lib\netstandard1.3\Microsoft.AspNetCore.Antiforgery.dll"
 -r:"C:\Users\David\.nuget\packages\Microsoft.AspNetCore.Authorization\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Authorization.dll"
 -r:"C:\Users\David\.nuget\packages\Microsoft.AspNetCore.Cors\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Cors.dll"
@@ -160,11 +160,12 @@
 -r:"C:\Users\David\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll"
 -r:"C:\Users\David\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\David\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
--resource:"c:\users\david\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\obj\Debug\netcoreapp1.0\CityInfo.APIdotnet-compile.deps.json",CityInfo.API.deps.json
-"c:\users\david\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\CitiesDataStore.cs"
-"c:\users\david\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Program.cs"
-"c:\users\david\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Startup.cs"
-"c:\users\david\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Controllers\CitiesController.cs"
-"c:\users\david\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Controllers\PointsOfInterestController.cs"
-"c:\users\david\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Models\CityDto.cs"
-"c:\users\david\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Models\PointOfInterestDto.cs"
+-resource:"C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\obj\Debug\netcoreapp1.0\CityInfo.APIdotnet-compile.deps.json",CityInfo.API.deps.json
+"C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\CitiesDataStore.cs"
+"C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Program.cs"
+"C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Startup.cs"
+"C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Controllers\CitiesController.cs"
+"C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Controllers\PointsOfInterestController.cs"
+"C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Models\CityDto.cs"
+"C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Models\PointOfInterestDto.cs"
+"C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Models\PointOfInterestForCreationDto.cs"
