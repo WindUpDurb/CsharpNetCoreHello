@@ -13,7 +13,11 @@ namespace CityInfo.API.Entities
         public CityInfoContext(DbContextOptions<CityInfoContext> options) : base(options)
         {
             //Ensures database is created if it isn't created
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
+
+            //We ensured our database can migrate to most recent version 
+            //if it isn't available
+            Database.Migrate();
         }
 
         //DbSets can be used to query and save instances of its entity type.
