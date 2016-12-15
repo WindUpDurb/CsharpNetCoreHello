@@ -13,8 +13,12 @@ namespace CityInfo.API.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        [Required]
+        [MaxLength(50)]
         public string Name { get; set; }
 
+        //below we state that navigation property City,
+        //the foreign key on point of interest is name CityId
         [ForeignKey("CityId")]
         //Below is a navigation property, and a relationship
         //will be created between the two

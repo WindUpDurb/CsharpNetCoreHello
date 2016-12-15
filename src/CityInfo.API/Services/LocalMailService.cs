@@ -8,6 +8,7 @@ namespace CityInfo.API.Services
 {
     public class LocalMailService : IMailService
     {
+        //Startup.Configuration grabbing from appSettings.json
         private string _mailTo = Startup.Configuration["mailSettings:mailToAddress"];
         private string _mailFrom = Startup.Configuration["mailSettings:mailFromAddress"];
 
