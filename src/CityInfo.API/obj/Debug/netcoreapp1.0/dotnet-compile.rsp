@@ -179,6 +179,7 @@
 --reference:C:\Users\David\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll
 --resource:"C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\obj\Debug\netcoreapp1.0\CityInfo.APIdotnet-compile.deps.json",CityInfo.API.deps.json
 C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\CitiesDataStore.cs
+C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\CityInfoContextExtensions.cs
 C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Program.cs
 C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Startup.cs
 C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Controllers\CitiesController.cs

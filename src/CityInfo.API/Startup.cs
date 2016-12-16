@@ -36,7 +36,10 @@ namespace CityInfo.API
                 //as this establishes the precedence with which settings will be applied
                 //if they exist in multiple locations.
                 //The last configuration specified wins
-                .AddJsonFile($"appSettings.{env.EnvironmentName}.json", optional:true, reloadOnChange: true);
+                .AddJsonFile($"appSettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
+                //to add Environment variables,
+                //which will be loaded from within the project properties
+                .AddEnvironmentVariables();
 
             Configuration = builder.Build();
         }
@@ -51,9 +54,8 @@ namespace CityInfo.API
 #else
             services.AddTransient<IMailService, CloudMailService>();
 #endif
-            //Server is equal to database found in SQL Server Object Explorer
-            //Under the View options
-            var connectionString = @"Server=(localdb)\mssqllocaldb;Database=CityInfoDB;Trusted_Connection=True;";
+          
+            var connectionString = Startup.Configuration["connectionStrings:cityInfoDBConnectionString"];
 
             //below to register db contexts, and by default
             //it will be registered with a scoped lifetime
@@ -62,8 +64,11 @@ namespace CityInfo.API
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,
+            ILoggerFactory loggerFactory, CityInfoContext cityInfoContext)
         {
+
+
             loggerFactory.AddConsole();
 
             loggerFactory.AddDebug();
@@ -76,6 +81,8 @@ namespace CityInfo.API
             {
                 app.UseExceptionHandler();
             }
+
+            cityInfoContext.EnsureSeedDataForConext();
 
             app.UseStatusCodePages();
 
