@@ -102,24 +102,21 @@ namespace CityInfo.API.Controllers
                 ModelState.AddModelError("Description", "The provided description should be different from the name.");
             }
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == cityId);
-            if (city == null) return NotFound();
+            if (!_cityInfoRepository.CityExists(cityId)) return NotFound();
 
-            //demo purposes - to be improved
-            var maxPointsOfInterestId = CitiesDataStore.Current.Cities.SelectMany(
-                c => c.PointsOfInterest).Max(p => p.Id);
+            var finalPointOfInterest = Mapper.Map<Entities.PointOfInterest>(pointOfInterest);
 
-            var finalPointOfInterst = new PointOfInterestDto()
+            _cityInfoRepository.AddPointOfInterestForCity(cityId, finalPointOfInterest);
+
+            if (!_cityInfoRepository.Save())
             {
-                Id = ++maxPointsOfInterestId,
-                Name = pointOfInterest.Name,
-                Description = pointOfInterest.Description
-            };
+                return StatusCode(500, "A problem happend while handling your request.");
+            }
 
-            city.PointsOfInterest.Add(finalPointOfInterst);
+            var createdPointOfInterestToReturn = Mapper.Map<Models.PointOfInterestDto>(finalPointOfInterest);
 
             return CreatedAtRoute("GetPointOfInterest", 
-                new { cityId = cityId, id = finalPointOfInterst.Id}, finalPointOfInterst);
+                new { cityId = cityId, id = createdPointOfInterestToReturn.Id}, createdPointOfInterestToReturn);
         }
 
         [HttpPut("{cityId}/pointsofinterest/{id}")]
