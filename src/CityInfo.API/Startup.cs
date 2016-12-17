@@ -61,6 +61,10 @@ namespace CityInfo.API
             //it will be registered with a scoped lifetime
             //passing it a method overload
             services.AddDbContext<CityInfoContext>(o => o.UseSqlServer(connectionString));
+
+            //for a repository, best to have a scoped lifetime, 
+            //so it is created once per request
+            services.AddScoped<ICityInfoRepository, CityInfoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
