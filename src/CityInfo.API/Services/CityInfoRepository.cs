@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 namespace CityInfo.API.Services
 {
     //this is the place where provide persistence logic
+    //make sure to register in ConfigureServices
     public class CityInfoRepository : ICityInfoRepository
     {
 
@@ -17,6 +18,11 @@ namespace CityInfo.API.Services
         public CityInfoRepository(CityInfoContext context)
         {
             _context = context;
+        }
+
+        public bool CityExists(int cityId)
+        {
+            return _context.Cities.Any(c => c.Id == cityId);
         }
 
         public IEnumerable<City> GetCities()

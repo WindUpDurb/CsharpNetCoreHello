@@ -194,9 +194,12 @@ C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\M
 C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Migrations\20161215201543_CityInfoDBAddPointOfInterestDescription.Designer.cs
 C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Migrations\CityInfoContextModelSnapshot.cs
 C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Models\CityDto.cs
+C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Models\CityWithoutPointsOfInterestDto.cs
 C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Models\PointOfInterestDto.cs
 C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Models\PointOfInterestForCreationDto.cs
 C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Models\PointOfInterestForUpdateDto.cs
+C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Services\CityInfoRepository.cs
 C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Services\CloudMailService.cs
+C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Services\ICityInfoRepository.cs
 C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Services\IMailService.cs
 C:\Users\David\documents\visual studio 2015\Projects\CityInfo\src\CityInfo.API\Services\LocalMailService.cs
