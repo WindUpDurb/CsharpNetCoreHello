@@ -90,6 +90,17 @@ namespace CityInfo.API
 
             app.UseStatusCodePages();
 
+            //to create a map from City and PoI entities to
+            //DTOs we are returning from API Actions
+            AutoMapper.Mapper.Initialize(cfg =>
+            {
+                //provide source as the first type (City Entity)
+                //and destination as the second type (CityWithoutPointsOfInterestDto)
+                cfg.CreateMap<Entities.City, Models.CityWithoutPointsOfInterestDto>();
+                cfg.CreateMap<Entities.City, Models.CityDto>();
+                cfg.CreateMap<Entities.PointOfInterest, Models.PointOfInterestDto>();
+            });
+
             app.UseMvc();
 
             //app.Run((context) =>
