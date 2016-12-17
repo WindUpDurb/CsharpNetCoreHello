@@ -101,6 +101,8 @@ namespace CityInfo.API
                 cfg.CreateMap<Entities.PointOfInterest, Models.PointOfInterestDto>();
                 //Automapper will ignore additional properties when mapping for below
                 cfg.CreateMap<Models.CityWithoutPointsOfInterestDto, Entities.PointOfInterest>();
+                cfg.CreateMap<Models.PointOfInterestForUpdateDto, Entities.PointOfInterest>();
+                cfg.CreateMap<Entities.PointOfInterest, Models.PointOfInterestForUpdateDto>();
             });
 
             app.UseMvc();
